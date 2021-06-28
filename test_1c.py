@@ -10,8 +10,10 @@ answer = input("do you want save this file? ")
 if answer == 'yes':
 
     a = str(input("name of csv: "))
-    np.savetxt(a, array, delimiter=",")
+    np.savetxt(a, array, delimiter=",", fmt="%d")
     if not ".csv" in a:
         a += ".csv"
-else:
+elif answer == 'no':
     print(array)
+else:
+    print("error")
